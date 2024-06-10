@@ -1,0 +1,36 @@
+{
+  "name": "risk-management",
+  "version": "3.0.0",
+  "description": "Template for the Learning Journey Building side-by-side extensions on SAP BTP",
+  "author": "m.haug@sap.com",
+  "license": "SAP SAMPLE CODE LICENSE",
+  "repository": "https://github.com/SAP-samples/sap-learning-extension-suite",
+  "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.12.10",
+    "@sap-cloud-sdk/http-client": "2.15.0",
+    "@sap/cds": "^7",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.108.14"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-risk-management": "cds watch --open risk-management/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER"
+      }
+    },
+    "cov2ap": {
+      "plugin": true
+    }
+  },
+  "sapux": [
+    "app/risk-management"
+  ]
+}

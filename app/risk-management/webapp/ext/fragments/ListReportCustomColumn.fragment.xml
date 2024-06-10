@@ -1,0 +1,11 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Column id="idActionColumn">
+        <Text
+            id="idActionColumnText"
+            text="Action"
+        />
+    </Column>
+</core:FragmentDefinition>

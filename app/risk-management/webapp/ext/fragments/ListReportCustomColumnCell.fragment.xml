@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+>
+    <l:VerticalLayout
+        id="idCustomColumnVerticalLayout"
+        core:require="{handler: 'riskmanagement/ext/controller/ListReportExtension'}"
+    >
+        <Button
+            id="idActionColumnListItemButton"
+            text="Custom Button"
+            press="handler.onCustomButtonPress"
+            visible="{
+                path: 'prio_code',
+                formatter: 'handler.getVisibleFormatter'
+            }"
+        />
+    </l:VerticalLayout>
+</core:FragmentDefinition>
